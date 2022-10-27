@@ -4,25 +4,25 @@
 *@author Данил Никитин
 */
 /* Удаление слов через одно */
-function deleteWords()
+function deleteWords($arr)
 {
     for ($i = 0; $i < count($GLOBALS['arr']); $i++) {
         if ($i % 2 != 0) {
-            $GLOBALS["arr"][$i] = "";
-            $GLOBALS["str1"] = implode(" ", $GLOBALS["arr"]);
+            $arr[$i] = "";
+            return implode(" ", $arr);
         }
     }
 }
 /* Формирование строки из первых букв каждого элемента массива */
-function firstLeter() {
-    for ($i = 0; $i < count($GLOBALS['arr']); $i++) {
-        $GLOBALS["arr"][$i] = $GLOBALS['arr'][$i][0];
-        $GLOBALS["str1"] = implode("", $GLOBALS["arr"]);
+function firstLeter($arr) {
+    for ($i = 0; $i < count($arr); $i++) {
+        $arr1[$i] = $arr[$i][0];
     }
+    return implode(" ", $arr1);
 }
 /* Замена порядка букв строки на противоположный */
-function reverseSorting()
+function reverseSorting($arr)
 {
-    krsort($GLOBALS['arr']);
-    $GLOBALS["str1"] = implode(" ", $GLOBALS['arr']);
+    krsort($arr);
+    return implode(" ", $arr);
 }
