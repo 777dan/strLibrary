@@ -2,8 +2,10 @@
 $str = "There are many cats in our house.";
 $arr = explode(" ", $str);
 require_once "library.inc";
-function getFunction() {
-    call_user_func('firstLeter');
+function getFunction()
+{
+    call_user_func('deleteWords');
+    print $GLOBALS["str1"];
 }
 getFunction();
 // function reverseSorting()

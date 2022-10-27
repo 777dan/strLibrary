@@ -16,11 +16,13 @@ function deleteWords()
 /* Формирование строки из первых букв каждого элемента массива */
 function firstLeter() {
     for ($i = 0; $i < count($GLOBALS['arr']); $i++) {
-        echo $GLOBALS['arr'][$i][0];
+        $GLOBALS["arr"][$i] = $GLOBALS['arr'][$i][0];
+        $GLOBALS["str1"] = implode("", $GLOBALS["arr"]);
     }
 }
 /* Замена порядка букв строки на противоположный */
 function reverseSorting()
 {
     krsort($GLOBALS['arr']);
+    $GLOBALS["str1"] = implode(" ", $GLOBALS['arr']);
 }
